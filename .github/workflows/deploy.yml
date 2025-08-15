@@ -17,4 +17,4 @@ jobs:
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
           nekoweb-domain: 'spaghetti.nekoweb.org'
           nekoweb-username: 'spaghetti'
-          directory: 'public'
+          directory: ''
