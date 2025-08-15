@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spagwhetti</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="title">spaghetti.nekoweb.org</h1>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="links.html">Links</a>
+            <a href="guestbook.html">Guestbook</a>
+            <a href="webring.html" class="selected">Webring</a>
+        </nav>
+
+        <div class="row">
+            <section id="info">
+                <h1>Bolognese webring</h1>
+                <p>
+                    The Bolognese Webring is open to most people/sites, just make sure your site is actually made by you, and not stolen, also no NSFW on the main page please, and have warnings for pages that do have NSFW.
+                </p>
+            </section>
+
+            <section id="form">
+                <h1>How to join.</h1>
+                <p>
+                    To join the bolognese webring, just email me <a href="mailto:spagwhetti@proton.me"> here</a> with the following format:
+                    <div class="widget">
+                        Slug: yourSlugHere<br>
+                        URL: https://example.com
+                    </div>
+                </p>
+            </section>
+        </div>
+
+        <section id="embed">
+            <h1>Adding the embed to your site</h1>
+            <p>
+                To add the webring's embed to your site you can use the following code, add it somewhere on your index page, or a links page if you have one.
+                <div class="widget">
+                    &lt;iframe src="https://spagwhetti.github.io/embed.html?name=<b>[YOUR SLUG]</b>" width="100%" height="3rem" style="border: none;"&gt;&lt;/iframe&gt;
+                </div>
+                <p>
+                    The embed will turn out like this:
+                </p>
+                <iframe src="https://spagwhetti.github.io/embed.html?name=spaghetti" style="border:none; height:3rem; width:100%"></iframe>
+            </p>
+        </section>
+
+        <section id="members">
+            <h1>Members</h1>
+            <div id="peoplelist"></div>
+        </section>
+
+        <footer>
+            meow meow meow made by spagwhetti — hosted by <a href="https://nekoweb.org" target="_blank">Nekoweb</a>
+        </footer>
+
+        <div id="version-footer">
+            <footer id="version">
+                <h1 id="version-text">v0.0.6</h1>
+            </footer>
+        </div>
+    </main>
+    <div id="colour"></div>
+    <div id="font"></div>
+    <script src="js/webring.js"></script>
+    <script src="js/customise.js"></script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+@font-face {
+    font-family: 'bios-font';
+    src: url('../assets/font/bios.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sheepish';
+    src: url(../assets/font/Sheepish-Regular.ttf) format('truetype');
+}
+
+:root {
+    --black: #161719;
+    --dark-grey: #424242;
+    --grey: #a0a0a0;
+    --white: #dbdad8;
+    --bright-white: #f0f0f0;
+
+    --blue: #0a0989;
+    --red: #9b0a0a;
+    --pink: #9b0a8a;
+    --green: #0a6c0a;
+
+    --helvetica: Helvetica, sans-serif;
+    --bios: bios-font;
+    --jetbrains: JetBrains Mono, monospace;
+    --sheepish: sheepish;
+}
+
+.blue {
+    --accent: var(--blue);
+}
+
+.red {
+    --accent: var(--red);
+}
+
+.pink {
+    --accent: var(--pink);
+}
+
+.green {
+    --accent: var(--green);
+}
+
+.helvetica {
+    --font: var(--helvetica);
+}
+
+.bios {
+    --font: var(--bios);
+}
+
+.jetbrains {
+    --font: var(--jetbrains);
+}
+
+.sheepish {
+    --font: var(--sheepish);
+    font-size: 21px;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font);
+    margin: 0;
+}
+
+header {
+    max-width: 215px;
+    width: 100%;
+    transform: skew(45deg, 0deg) translateX(20px);
+    background: var(--accent);
+    margin: 0 0 -8px 0
+}
+
+header #title {
+    color: var(--white);
+    background: var(--accent);
+    padding: 8px;
+    margin: 0;
+    transform: skew(-45deg) translateX(-20px);
+    max-width: 200px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--accent);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 6px 12px;
+}
+
+nav a:hover, nav a.selected {
+    background: var(--white);
+    color: var(--accent)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 800px;
+    margin: 8px auto;
+    color: var(--dark-grey);
+}
+
+main section {
+    flex: 1 1 0;
+    background: var(--white);
+    padding: 8px;
+}
+
+.widget {
+    min-width: 300px;
+    background: var(--bright-white);
+    padding: 8px;
+    color: var(--black);
+    box-shadow: 2px 2px 2px var(--grey);
+    border: 1px solid var(--accent);
+}
+
+footer {
+    background: var(--accent);
+    color: var(--white);
+    padding: 8px;
+    text-align: center;
+}
+
+div#version-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer#version {
+    max-width: 100px;
+    width: 100%;
+    padding: 0;
+    margin: -8px 0 0 0;
+    transform: skew(45deg, 0deg) translateX(-20px);
+    background: var(--accent);
+}
+
+h1#version-text {
+    color: var(--white);
+    background: var(--accent);
+    padding: 8px;
+    margin: 0;
+    transform: skew(-45deg) translateX(20px);
+    max-width: 200px;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer a:hover {
+    color: var(--accent);
+    background: var(--white);
+}
+
+.tabs-box {
+    padding: 0;
+    min-width: 300px;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+
+.tab button {
+    background: var(--accent);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    color: var(--bright-white);
+    font-family: var(--font);
+    font-size: 18px;
+}
+
+.tab button:hover {
+    background-color: var(--bright-white);
+    color: var(--accent);
+}
+
+.tab button.active {
+    background-color: var(--bright-white);
+    color: var(--accent);
+}
+
+.tabcontent {
+    display: none;
+    padding: 8px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+#time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 16px 0;
+}
+
+#time-label {
+    color: var(--dark-grey);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 190px;
+}
+
+#timezone {
+    color: var(--dark-grey);
+}
+
+#time {
+    font-size: 50px;
+}
+
+#date { 
+    color: var(--dark-grey);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 4px 0 4px 0;
+    font-size: 18px;
+    color: var(--black);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--white);
+    background: var(--accent);
+}
+
+#projects-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 8px 0 0 0;
+}
+
+#projects-list a {
+    background: var(--bright-white);
+    color: var(--accent);
+    box-shadow: 2px 2px 2px var(--grey);
+    border: 1px solid var(--accent);
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+    flex: 1 1 0;
+    min-width: 200px;
+}
+
+#projects-list a:hover {
+    background: var(--accent);
+    color: var(--bright-white);
+}
+
+i {
+    color: var(--black);
+}
+
+b {
+    color: var(--black);
+}
+
+code {
+    color: var(--accent);
+}
+
+.buttons-grid {
+    background: var(--bright-white);
+    border: 1px solid var(--accent);
+    box-shadow: 2px 2px 2px var(--grey);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+    padding: 8px;
+}
+
+.buttons-grid img, .buttons-grid a {
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
+    box-shadow: 2px 2px 2px var(--grey);
+    transition: 0.15s;
+}
+
+.buttons-grid img:hover, .buttons-grid a:hover {
+    background: none;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.button {
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
+}
+
+.button-code {
+    display: inline-block;
+    flex: 1 1 0;
+    padding: 4px;
+    background: var(--bright-white);
+    box-shadow: 2px 2px 2px var(--grey);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.links a {
+    background: var(--bright-white);
+    color: var(--accent);
+    box-shadow: 2px 2px 2px var(--grey);
+    border: 1px solid var(--accent);
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.links a:hover {
+    background: var(--accent);
+    color: var(--bright-white);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row section {
+    min-width: 200px;
+}
+
+select {
+    background: var(--bright-white);
+    color: var(--accent);
+    box-shadow: 2px 2px 2px var(--grey);
+    font-family: var(--font);
+    padding: 4px;
+    cursor: pointer;
+    border: 1px solid var(--accent);
+}
+
+select:hover {
+    background: var(--accent);
+    color: var(--bright-white);
+}
+
+ul {
+    padding: 8px 8px 8px 24px;
+    list-style-type: square;
+}
+
+.list-item {
+    float: right;
+    text-decoration: dotted underline;
+    color: var(--accent);
+}
+
+#peoplelist {
+    padding: 8px;
+    background: var(--bright-white);
+    box-shadow: 2px 2px 2px var(--grey);
+    border: 1px solid var(--accent);
+    margin: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#peoplelist p {
+    margin: 0;
+}
+
+#peoplelist a {
+    padding: 8px;
+}
+
+#s-m-t-tooltip{
+/* basic */
+    max-width: 220px;
+    z-index: 10;
+    margin: 24px 14px 7px 12px;
+/* style and design */
+    padding:4px;
+    border:1px solid var(--accent);
+    background-color: var(--bright-white);
+    color: var(--black);
+    box-shadow: 2px 2px 2px var(--grey);
+}
+
+#album-cover {
+    box-shadow: 2px 2px 2px var(--grey);
+    border: 1px solid var(--accent);
+}
+
+.widget #nekocafe, .widget #lastfm {
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+
+#nekocafe-pfp {
+    width: 64px;
+    height: 64px;
+    box-shadow: 2px 2px 2px var(--grey);
+    border: 1px solid var(--accent);
+}
+
+#nekocafe-text {
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+
+.webring {
+    border: 1px solid var(--accent);
+    box-shadow: 2px 2px 2px var(--grey);
+    display: flex;
+    flex-direction: row;
+}
+
+.webring .prev, .webring .home, .webring .next {
+    background: var(--bright-white);
+    color: var(--accent);
+    text-decoration: none;
+    
+    padding: 4px 12px 4px 12px;
+}
+
+.webring .prev:hover, .webring .home:hover, .webring .next:hover {
+    background: var(--accent);
+    color: var(--bright-white);
+}
+
+.webring .home {
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    padding: 4px;
+}
+
+/*
+@media (width < 600px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        text-align: center;
+        width: 100%;
+    }
+}
+*/

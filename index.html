@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spagwhetti</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="title">spaghetti.nekoweb.org</h1>
+        </header>
+
+        <nav>
+            <a href="index.html" class="selected">Home</a>
+            <a href="links.html">Links</a>
+            <a href="guestbook.html">Guestbook</a>
+            <a href="webring.html">Webring</a>
+        </nav>
+        
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <p>
+                Hi! I'm spagwhetti and this is my website, I've been using HTML/CSS/JS for about a year now, I got into it by just seeing other sites people were making and then inspect elementing them.
+            </p>
+            <p>
+                Other things I enjoy include playing games and listening to music, games wise I like <i>minecraft, terraria &amp; undertale</i>. Music wise I like <i>indie rock, pop rock &amp; garage rock</i>..
+            </p>
+
+            <div class="row">
+                <div class="column">
+                    <section id="lastfm" class="widget">
+                        <h1>Last song</h1>
+                        <div class="row">
+                            <img id="album-cover" width="64" height="64">
+                            <div class="column" style="padding: 8px 0">
+                                <b id="song">Loading...</b>
+                                <i id="artist">Loading...</i>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="nekocafe" class="widget">
+                        <h1>Status</h1>
+                        <div id="status">
+                            Loading Status...
+                        </div>
+                    </section>
+                </div>
+
+                <section class="widget tabs-box">
+                    <div class="tab">
+                        <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'timetab')">Time</button>
+                        <button class="tablinks" onclick="openTab(event, 'riiatw')">RIIATW</button>
+                    </div>
+
+                    <div id="timetab" class="tabcontent">
+                        <div id="time-container">
+                            <div id="time-label">
+                                <span>MY</span>
+                                <span>LOCAL</span>
+                                <span>TIME</span>
+                            </div>
+                            <span id="time">Loading time...</span>
+                            <div>
+                                <span id="date">Loading date...</span> — <span id="timezone">UTC+01:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="riiatw" class="tabcontent">
+                        <p>
+                            Relatively important information about this website, inspired by <a href="https://jbc.lol/riiatw" target="_blank">Jb</a> & <a href="https://mechagic.party" target="_blank">Mechagic</a>'s version.
+                        </p>
+                        <ul>
+                            <li>Responsive down to 230px wide, best viewed on desktop.</li>
+                            <li>Hosted on <a href="https://nekoweb.org/" target="_blank">Nekoweb.org</a>.</li>
+                            <li>Tested on <a href="https://firefox.com/" target="_blank">Firefox</a>.</li>
+                            <li>There are some cookies, only used for the colour switcher, and the font switcher.</li>
+                        </ul>
+                        <p>There is quite a bit of javascript, here is what uses it;</p>
+                        <ul>
+                            <li>The colour & font switcher.</li>
+                            <li>The last song widget.</li>
+                            <li>The site statistics.</li>
+                            <li>The nekocafe status widget.</li>
+                            <li>The tabs on /index</li>
+                            <li>My local time on /index</li>
+                            <li>tooltips for hovering over some stuff</li>
+                            <li>the webring page to display the list of members</li>
+                            <li>The guestbook.</li>
+                        </ul>
+                </section>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <div id="projects-list">
+                <a href="https://spaghetti.nekoweb.org/">This site</a>
+                <a href="https://userstyles.world/style/23486" target="_blank">Nekoweb BIOS Userstyle</a>
+                <a href="https://userstyles.world/style/23560" target="_blank">Atabook BIOS Userstyle</a>
+            </div>
+        </section>
+
+        <div class="row">
+            <section id="customise">
+                <h1>Customise</h1>
+                <div class="column">
+                    <select name="colour" id="colour" class="list-item" title="Choose the accent colour">
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="pink">Pink</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <select name="font" id="font" class="list-item" title="Choose the font">
+                        <option value="helvetica">Helvetica</option>
+                        <option value="bios">Perfect Dos VGA 437</option>
+                        <option value="jetbrains">Jetbrains Mono</option>
+                        <option value="sheepish">Sheepish</option>
+                    </select>
+                </div>
+                <p>
+                    Sheepish is <a href="https://sheep.nekoweb.org">sheep</a>'s own handwriting that they made into a font.
+                </p>
+            </section>
+
+            <section id="webrings">
+                <h1>Webrings</h1>
+                <div class="column" style="margin: 12px 0 0 0">
+                    <div class="webring">
+                        <a class="prev" href="https://spagwhetti.github.io/redirect.html?to=prev&amp;name=spaghetti" target="_parent">&lt;</a>
+                        <a class="home" href="https://spaghetti.nekoweb.org/webring" target="_parent">bolognese</a>
+                        <a class="next" href="https://spagwhetti.github.io/redirect.html?to=next&amp;name=spaghetti" target="_parent">&gt;</a>
+                    </div>
+                    <div class="webring">
+                        <a class="prev" href="https://webring.bucketfish.me/redirect.html?to=prev&amp;name=spagwhetti" target="_parent">&lt;</a>
+                        <a class="home" href="https://webring.bucketfish.me/" target="_parent">bucket</a>
+                        <a class="next" href="https://webring.bucketfish.me/redirect.html?to=next&amp;name=spagwhetti" target="_parent">&gt;</a>
+                    </div>
+                    <div class="webring">
+                        <a class="prev" href="https://baccyflap.com/noai/?prv&amp;s=spa" target="_parent">&lt;</a>
+                        <a class="home" href="https://baccyflap.com/noai" target="_parent">no ai</a>
+                        <a class="next" href="https://baccyflap.com/noai/?nxt&amp;s=spa" target="_parent">&gt;</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="statistics">
+                <h1>Site Statistics</h1>
+                <ul>
+                    <li>Created: <span id="created" class="list-item">Loading...</span></li>
+                    <li>Updated: <span id="updated" class="list-item">Loading...</span></li>
+                    <li>Visits: <span id="visits" class="list-item">Loading...</span></li>
+                    <li>Followers: <span id="followers" class="list-item">Loading...</span></li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            meow meow meow made by spagwhetti — hosted by <a href="https://nekoweb.org" target="_blank">Nekoweb</a>
+        </footer>
+
+        <div id="version-footer">
+            <footer id="version">
+                <h1 id="version-text">v0.0.6</h1>
+            </footer>
+        </div>
+    </main>
+    <script src="js/time.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/tooltips.js"></script>
+    <script src="js/status.js"></script>
+    <script src="js/song.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/customise.js"></script>
+</body>
+</html>
